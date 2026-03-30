@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!--这里面的值只能是表达式 -->
+        <!-- 表达式的种类 -->
+         <!-- 1.变量名/字面量
+              2.对象.属性名
+              3.三元运算/算术运算
+              4.函数/方法的调用-->      
+        <h1>{{msg}}</h1>
+        <!-- 对象 -->
+        <p>我叫{{obj.name}},今年{{obj.age}}了</p>
+        <!-- 三目表达式 -->
+        <p>{{obj.age >= 18  ? '已成年' : '未成年'}}</p>
+        <!-- 函数的调用 -->
+        <p>{{fn()}}</p>
+        <!-- 方法的调用 -->
+         <p>{{msg}}是由{{msg.split(' ').length}}个单词组成的</p>
+    </div>
+        <!-- 1.引入vue3源代码 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        Vue.createApp({
+            // vue3的数据和函数要在setup中声明
+            setup(){ 
+                const msg = 'Hello World'
+
+                const obj ={
+                    name : "xiaoli",
+                    age : 18
+                }
+
+                const fn = () =>{
+                    return 666
+                }
+
+                return {
+                    msg,
+                    obj,
+                    fn
+                }
+            }
+        }).mount('#app')
+    </script>
+</body>
+
+</html>
