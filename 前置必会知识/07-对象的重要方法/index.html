@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const obj = {
+            id:10001,
+            name:"xiaoli",
+            age:9,
+            address:"beijing"
+        }
+        
+        // // 现在遍历对象:Object.keys() + foreach
+        // Object.keys(obj).forEach(key=>{
+        //     console.log(key,obj[key]);
+        // })
+
+
+        // 现在遍历对象: Object.keys() + filter + foreach
+
+
+
+        Object.key(obj).filter((key) => key.startsWith('a'))
+        .forEach(key => {
+            console.log(obj[key])
+        });
+
+    </script>
+
+</body>
+</html>

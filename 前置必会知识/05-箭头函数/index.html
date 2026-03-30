@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // // 有名函数
+    // function fn(){
+    //     //some code...
+    //     //return 结果
+    // }
+
+    // // 函数表达式
+    // const fn = function(){
+    //     //some code...
+    //     //return 结果
+    // }
+
+    // const result = fn(); // 调用函数并获取返回值
+
+
+
+    // 箭头函数
+    // const fn = () =>{
+
+    // }
+
+    // const add =(x,y) =>{
+    //     return x+y;
+    // }
+
+    // console.log(add(2,3)); // 输出: 5
+
+    //2.特性
+    //2.1 当参数只有一个时，可以省略小括号
+    // const log = arg =>{
+    //     console.log(arg);
+    // }
+    // log("Hello, World!"); // 输出: Hello, World!
+
+    //2.2当函数体只有一句话时，可以省略大括号，此时箭头自带return功能
+    // const square = x => x * x;
+    // console.log(square(5)); // 输出: 25
+
+
+    //2.3当直接返回一个对象时，为了简写，需要给对象加一对小括号
+
+    const state = () => {
+        return { 
+            name: "Alice",
+            age: 30
+        };
+    }
+
+    const statue = () =>({
+        name: "Alice",
+        age: 30
+    });
+    // console.log(statue()); // 输出: { name: 'Alice', age: 30 }
+
+
+
+    //3.应用
+    //既可以用于函数的声明，也可以多用于回调函数传参
+    // setTimeout(function(){
+    //     console.log("Hello, World!"); // 输出: Hello, World!
+    // },2000);
+
+    setTimeout(() =>{
+        console.log("Hello, World!"); // 输出: Hello, World!
+    },2000);
+
+
+
+    </script>
+
+</body>
+</html>

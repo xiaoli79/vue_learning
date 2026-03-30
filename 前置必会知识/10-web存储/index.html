@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //持久化存储
+        //1.存
+        localStorage.setItem('name', 'xiaoli111');
+        //2.取
+        //如果存在key,则去除相应的数据；否则取值为null
+        console.log(localStorage.getItem('name'));
+        // //3.删
+        // localStorage.removeItem('name');
+
+        const obj ={
+            id:10001,
+            name:'xiaoli',
+            age:18
+        }
+
+
+        
+        //存：序列化
+        localStorage.setItem('obj', JSON.stringify(obj));
+
+        //取：反序列化
+        console.log(JSON.parse(localStorage.getItem('obj')));
+    </script>
+</body>
+</html>
