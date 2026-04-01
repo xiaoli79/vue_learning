@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.引入vue3源代码 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+        <!-- 2.准备容器 -->
+     <div id="app">
+        <!-- 4.渲染数据 -->
+        {{msg}}
+     </div>
+
+     <!-- <div id="root">
+        {{msg}}
+     </div> -->
+     <script>
+        //3.创建vue3应用并提取数据
+        // console.log(Vue)
+        Vue.createApp({
+            // vue3代码的入口函数
+            setup(){
+                const msg = "Hello World"
+                console.log(this)
+                return{
+                    msg
+                }
+            }
+
+        }).mount('#root') //把内容渲染到 id =app 的盒子里
+     </script>
+
+</body>
+</html>
