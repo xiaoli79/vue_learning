@@ -1,0 +1,7 @@
+1.创建vue的命令
+npm create vue@latest
+假如项目名称为(vue-enigeering-way)
+2.创建完执行如下命令，即可创建好工程化项目
+cd vue-engineering-way
+npm install
+npm run dev
