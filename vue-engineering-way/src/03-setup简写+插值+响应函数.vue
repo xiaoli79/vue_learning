@@ -30,8 +30,6 @@
    <!--5.方法的调用 -->
    <p>{{msg}} 由{{msg.split(' ').length}}个单词组成</p>
 </template>
-
-
 <style scoped>
 
 </style>
