@@ -15,6 +15,9 @@
     //使用计算属性自动触发get
     get(){
       
+
+
+      //every()这个参数里面必须放函数
       //every: 检测每一个元素
       return planList.value.every(item => item.done)
 
