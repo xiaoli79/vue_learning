@@ -3,6 +3,7 @@
   //导入组件
   //大驼峰：每个单词的首字母都大写
   //烤串法：每个单词都小写，不同单词之间用短横线连接
+  import MyPanel from './components/MyPanel.vue';
 
 </script>
 
@@ -10,8 +11,8 @@
   <h3>可折叠面板</h3>
   <!-- 使用组件：既可以是双标签，也可以是自闭和的单标签 -->
    <!-- 大驼峰写法 -->
-  <MyPanel/>
-  <MyPanel></MyPanel>
+  <!-- <MyPanel/>
+  <MyPanel></MyPanel> -->
   <!-- 烤串法 -->
   <my-panel></my-panel>
   <my-panel/>
