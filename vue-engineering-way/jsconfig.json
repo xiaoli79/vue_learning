@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["03-组件的全局使用/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
