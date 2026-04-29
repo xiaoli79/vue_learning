@@ -1,3 +1,27 @@
+<script setup>
+import { onMounted,onUnmounted } from 'vue';
+
+
+const timer = setInterval(() =>{
+    console.log('Hello World')
+},1000)
+
+
+onMounted(()=>{
+    console.log(document.querySelector('p'))
+    document.querySelector('p').style.color = 'green'     
+})
+
+
+onUnmounted(()=>{
+    clearInterval(timer)
+})
+
+
+</script>
+ 
+
+<!-- 选项式API -->
 <script>
 
 export default{
@@ -30,6 +54,11 @@ export default{
         console.log('2-created')
         console.log(this.count) //可以访问到
         console.log(this.fn) //可以访问到
+
+        //在给当前组件实例新增了一个timerId属性,保存了当时定时器的Id值,开启了定时器
+        this.timerId = setInterval(()=>{
+            console.log(this.count)
+        },1000)
     },
     //挂载前,此时写在template下的标签还没有变成真实DOM，故而无法获取DOM
     beforeMount(){
@@ -42,7 +71,7 @@ export default{
         console.log('4-mounted')
         console.log(document.querySelector('p'))   // <p>0</p>
         // 控制DOM样式
-        document.querySelector('p').style.color='red'
+        // document.querySelector('p').style.color='red'
     },
 
     //更新阶段(第三阶段)
@@ -55,7 +84,6 @@ export default{
 
     },
 
-
     //更新后
     updated(){
         console.log('6-updated')
@@ -64,17 +92,18 @@ export default{
         // console.log(this.count)
     },
 
-
-    //卸载阶段(第四阶段): 组件移除阶段
+    //卸载阶段(第四阶段): 组件移除阶段,
     //销毁前
     beforeUnmount(){
         console.log('7-beforeUnmount')
     },
 
-
     //销毁后
     unmounted(){
         console.log('8-unmounted')
+
+        //关闭定时器
+        clearInterval(this.timerId)
     }
 }
 

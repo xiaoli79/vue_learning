@@ -1,10 +1,9 @@
 <script setup>
-import { ref } from 'vue';
 import MyGoods from './components/MyGoods.vue';
 
 // 提供数据
 // 商品列表
-const goodsList = ref([
+const goodsList = [
     {
         id: '4001172',
         name: '称心如意手摇咖啡磨豆机咖啡豆研磨机',
@@ -53,25 +52,17 @@ const goodsList = ref([
         price: 139,
         picture: 'https://yanxuan-item.nosdn.127.net/8896b897b3ec6639bbd1134d66b9715c.jpg'
     }
-]);
-
-
-//i下标,
-const subPrice = (i,price) => {
-    goodsList.value[i].price -= price
-}
+];
 </script>
 
 <template>
 <div class="list">
     <my-goods
-        v-for="(item,index) in goodsList"
+        v-for="item in goodsList"
         :key="item.id"
         :imgUrl = "item.picture"
         :title="item.name"
         :price = "item.price"
-        :idx = "index"
-        @ccc="subPrice"
     />
 </div>
 </template>
