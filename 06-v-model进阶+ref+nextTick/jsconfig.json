@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["08-nextTick使用/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
