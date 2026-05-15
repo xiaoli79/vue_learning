@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["03-自定义指令的简写/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
