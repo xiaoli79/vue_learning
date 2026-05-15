@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        const p = new Promise((resolve,reject) =>{
+            //1.在这里进行包装异步代码:定时器、ajax请求
+            //如果异步操作成功了，需要调用resolve（成功的数据）
+            //如果异步操作失败了，需要调用reject（失败的原因）
+
+            setTimeout(() => {
+                const success = false; // 模拟异步操作的结果
+                if(success){
+                    resolve('异步操作成功！');
+                }else{  
+                    reject('异步操作失败！');
+                }
+            }, 2000);
+        })
+
+        //2.使用Promise对象
+        p.then((result) => {
+            console.log(result); // 输出：异步操作成功！
+        },(error)=>{
+            console.log(error);
+        })
+    </script>
+
+
+
+</body>
+</html>

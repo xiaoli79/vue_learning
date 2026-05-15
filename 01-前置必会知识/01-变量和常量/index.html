@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <script>
+        
+        // let name = "Alice"; // 这是一个字符串变量
+
+        // name = "Bob"; // 变量的值可以改变
+
+        // const PI = 3.14; // 这是一个常量，表示圆周率
+        // PI = 3.14159; 
+
+
+        // // 这个下面的值可以修改，但是地址不能变换，因为是常量
+        // const user = {
+        //     "name": "Alice",
+        //     "age": 30
+        // }
+
+        // const arr = [1, 2, 3]; // 这是一个数组常量
+        const arr = [1, 2, 3];
+        arr.push(4);
+        console.log(arr); // 输出: [1, 2, 3, 4]
+
+        arr.shift();
+        console.log(arr); // 输出: [2, 3, 4]
+
+
+        const user = {
+            "name": "Alice",
+            "age": 30
+        };
+
+        user.birthday = "1990-01-01";
+        console.log(user); // 输出: { name: 'Alice', age: 30, birthday: '1990-01-01' }
+        user.age = 18;
+        console.log(user); // 输出: { name: 'Alice', age: 18, birthday: '1990-01-01' }
+
+    </script>
+    
+</body>
+</html>

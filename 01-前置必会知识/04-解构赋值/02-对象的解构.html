@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const obj = {
+        //     name: "Alice",
+        //     age: 30,
+        //     hobbies: ["reading", "traveling", "coding"],
+        //     address: {
+        //         city: "New York",
+        //         country: "USA"
+        //     }
+        // }
+
+        // 对象的解构
+        //这三个是无序的，只要是有，就可以
+        // let {name,age,hobbies,address} = obj;
+        // console.log(name,age,hobbies,address); // 输出: Alice 30 [ 'reading', 'traveling', 'coding' ] { city: 'New York', country: 'USA' }
+
+
+        //复制两个就行
+        // let{name,age} = obj;
+        // console.log(name,age); // 输出: Alice 30
+
+
+        // let{name,...rest} = obj;
+        // console.log(name); // 输出: Alice
+        // console.log(rest); // 输出: { age: 30, hobbies: [ 'reading
+
+
+        //将name的值重命名为uname
+        // let{name : uname} = obj;
+        // console.log(uname); // 输出: Alice
+        // console.log(name); // 输出: undefined
+
+
+
+        const obj ={
+            data:{
+                code : 10000,
+                message:"success",
+                result:['data1','data2','data3']
+            },
+            status: 200,
+            statusText: 'OK'
+        }
+        let {code,message,result:list} = obj.data;
+        console.log(code,message,list); // 输出: 10000 success [ 'data1', 'data2', 'data3' ]  
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+    
+</body>
+</html>

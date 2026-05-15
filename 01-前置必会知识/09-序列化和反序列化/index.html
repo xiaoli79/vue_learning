@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //普通对象
+        const obj = {
+            id:10001,
+            name:"xiaoli",
+            age:9,
+            address:"beijing"
+        }
+
+        //json格式
+        const json = `{
+            "id":10001,
+            "name":"xiaoli",
+            "age":12,
+            "address":"beijing"
+        }`
+
+        // 将对象转换为JSON字符串
+        console.log(JSON.stringify(obj)); 
+
+
+        // 将JSON字符串转换为对象
+        console.log(JSON.parse(json)); 
+
+    </script>
+
+</body>
+</html>

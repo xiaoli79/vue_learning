@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 数组的解构
+        // const arr = [11,22,33]
+        // let [a, b, c] = arr;
+        // console.log(a,b,c); // 输出: 11 22 33
+
+
+        // 如果只想获取数组中的某些元素，可以使用逗号来跳过不需要的元素
+        // let[,b,c] = arr;
+        // console.log(b,c); // 输出: 22 33
+
+        // 使用剩余运算符获取数组中剩余的元素
+        // let[a,...rest] = arr;
+        // console.log(a, rest); // 输出: 11 [22, 33]
+
+
+        const arr = [1,[2,3],4];
+
+        let[,[b,c],] = arr;
+        console.log(b,c); // 输出: 2 3
+
+
+    </script>
+
+
+    
+    
+</body>
+</html>
