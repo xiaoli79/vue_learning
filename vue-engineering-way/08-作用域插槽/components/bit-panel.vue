@@ -1,6 +1,12 @@
 <script setup>
 import { ref } from 'vue';
     const visible = ref(true)
+
+
+
+	const a = ref("贾靖远")
+
+	const b = ref("肥波")
 </script>
 
 <template>
@@ -9,7 +15,7 @@ import { ref } from 'vue';
     
     <!-- 如果是展开，将底边框置为透明色，合起来，把底边框置为#ccc -->
 		<div class="title" :style="{borderBottomColor:visible ? 'transparent' :'#ccc'}">
-			<h4>自由与爱情</h4>
+			<h4><slot name = "title" :n1 = "a" :n2 = "b"> </slot></h4>
 			<span
 				class="btn"
 				@click="visible = !visible">
@@ -21,7 +27,9 @@ import { ref } from 'vue';
 			class="container"
 			v-show="visible">
             <!-- 在组件标签不确定的位置，用slot占位 -->
-            <slot></slot>      
+            <slot name = "body">
+
+			</slot>      
 		</div>
 	</div>
 </template>
