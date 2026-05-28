@@ -53,18 +53,4 @@ const router = createRouter({
     ]
 })
 
-
-const isLogin = false
-//路由守卫
-router.beforeEach((to,from) => {
-
-    if(isLogin === false && to.path === '/my'){
-        alert('请先登录')
-        return false
-    }else{
-        return true
-    }
-})
-
 export default router
- 
