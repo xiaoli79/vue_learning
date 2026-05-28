@@ -1,15 +1,16 @@
 <script setup>
-  
+
+
 </script>
 
+
+
 <template>
-  <div>
-    <input type="text" v-jujiao>
-  </div>
+  <router-view/>
 </template>
 
 
-
 <style scoped>
+
 
 </style>
