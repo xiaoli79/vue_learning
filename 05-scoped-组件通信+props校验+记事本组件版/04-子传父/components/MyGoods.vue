@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 
 const props = defineProps(['imgUrl', 'title', 'price', 'idx'])
+
 const emit = defineEmits(['ccc'])
 
 const cutAmount = ref(3)

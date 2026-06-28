@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["02-pinia对象传参/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}
